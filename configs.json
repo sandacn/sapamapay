@@ -1,0 +1,19 @@
+{
+    "upload_path": "/home/sapama/projects/web/ucm_file_poller/upload",
+    "backup_path": "/home/sapama/projects/web/ucm_file_poller/backup",
+    "end_point": "http://172.16.102.233/ucm_api/sendmsg.php",
+    "mysql": {
+        "db_host": "127.0.0.1",
+        "db_user": "root",
+        "db_pass": "root",
+        "db_name": "ucm_api",
+        "db_table": "tbl_file_poller"
+    },
+    "user_configs": {
+        "TranzTWCMS": {
+            "username": "CRM",
+            "password": "9D0k2SNfL51C"
+        }
+    },
+    "last_time": "2017-02-01 10:10:10"
+}
