@@ -1,7 +1,7 @@
 {
     "upload_path": "/home/sapama/projects/web/ucm_file_poller/upload",
     "backup_path": "/home/sapama/projects/web/ucm_file_poller/backup",
-    "end_point": "http://172.16.102.233/ucm_api/sendmsg.php",
+    "end_point": "http://172.16.102.233/api/",
     "mysql": {
         "db_host": "127.0.0.1",
         "db_user": "root",

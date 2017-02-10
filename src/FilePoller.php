@@ -96,8 +96,6 @@ class FilePoller {
                         //Call UCM
                         $ucm_response = $this->callUcm($line_parts[1], $line_parts[2]);
 
-                        var_dump($ucm_response);
-                        echo '<p>';
                         if (!(int) $ucm_response['status']) {
                             $line = 'PROCESSED ' . $line;
                             $records_processed++;
