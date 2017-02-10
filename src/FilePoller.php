@@ -3,9 +3,12 @@
 namespace Edwinmugendi\Poller;
 
 /**
- * Description of FilePoller
+ * S# FilePoller() class
  *
- * @author sapama
+ * @author Edwin Mugendi <edwinmugendi@gmail.com>
+ * 
+ * File Poller class
+ * 
  */
 class FilePoller {
 
@@ -86,7 +89,6 @@ class FilePoller {
                 $line_parts = explode(' ', $line, 3);
 
                 if ($line_parts[0] != 'PROCESSED') {
-
                     $this->recipient = $line_parts[1];
                     $this->message = $line_parts[2];
                     if ($line_parts[1] && $line_parts[2]) {
@@ -94,7 +96,9 @@ class FilePoller {
                         //Call UCM
                         $ucm_response = $this->callUcm($line_parts[1], $line_parts[2]);
 
-                        if (!$ucm_response['status']) {
+                        var_dump($ucm_response);
+                        echo '<p>';
+                        if (!(int) $ucm_response['status']) {
                             $line = 'PROCESSED ' . $line;
                             $records_processed++;
                         }//E# if statement
@@ -116,6 +120,9 @@ class FilePoller {
         } else {
             unlink($writing_path);
         }//E# if else statement
+
+        echo 'Records ' . $records . '<p>';
+        echo 'Records processed ' . $records_processed . '<p>';
 
         if ($records && ($records == $records_processed)) {//Before backing up ensure the records and records processed are the same
             //Build name
@@ -146,7 +153,8 @@ class FilePoller {
      * 
      * @return boolean
      */
-    private function backupFile($original_file_path, $backup_name, $records, $records_processed) {
+    private function backupFile($original_file_path, $backup_name) {
+
         $copy_to_path = $this->configs['backup_path'] . '/' . $backup_name;
 
         $copied = rename($original_file_path, $copy_to_path);
@@ -194,9 +202,7 @@ class FilePoller {
      * 
      */
     private function callUcm($recipient, $message) {
-        $this->response = array(
-            'status' => 0
-        );
+
         //Query string
         $query_string = array(
             'action' => 'sendmessage',
