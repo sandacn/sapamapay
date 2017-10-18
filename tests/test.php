@@ -17,7 +17,7 @@ $mpesa_api = new MpesaApi();
 $configs = array(
     'ConsumerKey' => 'Li2dKUeKhlX6Gw0Fpkbq6LEBndlpOuxZ',
     'ConsumerSecret' => 'hX3Yyd0BGMBiYaln',
-    'Authorization' => 'Bearer vfKVB5ySRIkYMoMTgMJkULUX8ir5',
+    'Authorization' => 'Bearer bxwmAEnLefgz9pwHGVIW0QW1CWAG',
     'Environment' => 'sandbox',
     'Content-Type' => 'application/json',
 );
