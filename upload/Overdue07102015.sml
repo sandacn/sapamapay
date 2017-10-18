@@ -1,9 +1,0 @@
-+NA Dear SILAH, please note your Credit Card 520193******4507 is Kshs7616.84 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre
-+254757695085 Dear YUSUF, please note your Credit Card 417482******3476 is Kshs4875.49 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre
-+0928301602 Dear ROBERT, please note your Credit Card 417482******8716 is Kshs20675.01 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre
-+NA Dear HILLARY, please note your Credit Card 520193******8952 is Kshs4635.20 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre
-+25427963069 Dear JAPHETH, please note your Credit Card 417482******5078 is Kshs248.19 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre
-+254 Dear SUSAN, please note your Credit Card 417482******5520 is Kshs3355.51 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre
-+254 Dear ABDULMUTALIB, please note your Credit Card 417482******7633 is Kshs27046.65 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre
-+254572020012 Dear VICTORIA, please note your Credit Card 426339******3229 is Kshs25505.56 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre
-+2552751100 Dear KILIMANI, please note your Credit Card 426339******5257 is Kshs38826.23 overdue. Kindly arrange to pay overdue amount by 10/10/2015. For any queries contact us on 0711087222/0732187222. KCB Card Centre

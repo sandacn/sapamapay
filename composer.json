@@ -1,6 +1,6 @@
 {
-    "name": "edwinmugendi/poller",
-    "description": "UCM File Poller",
+    "name": "edwinmugendi/mpesa",
+    "description": "Safaricom MPESA API",
     "authors": [
         {
             "name": "Edwin Mugendi",
@@ -9,11 +9,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=4.0.2"
+        "php": ">=5.4.0"
     },
     "autoload": {
         "psr-4": {
-            "Edwinmugendi\\Poller\\": "src/"
+            "Edwinmugendi\\Mpesa\\": "src/"
         }
     }
 }
