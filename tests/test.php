@@ -119,8 +119,8 @@ if ($api == 'stk_push') {
     );
 } else if ($api == 'generate_token') {
     $parameters = array(
-        'ConsumerKey' => 'CONSUMER_KEY',
-        'ConsumerSecret' => 'CONSUMER_SECRET',
+        'ConsumerKey' => 'Li2dKUeKhlX6Gw0Fpkbq6LEBndlpOuxZ',
+        'ConsumerSecret' => 'hX3Yyd0BGMBiYaln',
     );
 }//E# if statement
 
