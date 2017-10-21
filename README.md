@@ -10,24 +10,22 @@
 ## SapamaPay API
 This library is an API wrapper to the following [Safaricom MPESA API's](https://developer.safaricom.co.ke/)
 
-- [Lipa Na M-Pesa Online Payment API](https://developer.safaricom.co.ke/lipa-na-m-pesa-online/apis/post/stkpush/v1/processrequest).
-- [Lipa Na M-Pesa Query Request API](https://developer.safaricom.co.ke/lipa-na-m-pesa-online/apis/post/stkpushquery/v1/query).
-- [Account Balance Request](https://developer.safaricom.co.ke/account-balance/apis/post/query).
-- [B2B Payment Request](https://developer.safaricom.co.ke/b2b/apis/post/paymentrequest).
-- [B2C Payment Request](https://developer.safaricom.co.ke/b2c/apis/post/paymentrequest).
-- [Transaction Status Request](https://developer.safaricom.co.ke/transaction-status/apis/post/query).
-- [C2B Simulate Transaction](https://developer.safaricom.co.ke/c2b/apis/post/simulate).
-- [C2B Register URL](https://developer.safaricom.co.ke/c2b/apis/post/registerurl).
-- [Reversal](https://developer.safaricom.co.ke/reversal/apis/post/request).
-- [Generate Token](https://developer.safaricom.co.ke/oauth/apis).
+- [Lipa Na M-Pesa Online Payment API](https://developer.safaricom.co.ke/lipa-na-m-pesa-online/apis/post/stkpush/v1/processrequest)
+- [Lipa Na M-Pesa Query Request API](https://developer.safaricom.co.ke/lipa-na-m-pesa-online/apis/post/stkpushquery/v1/query)
+- [Account Balance Request](https://developer.safaricom.co.ke/account-balance/apis/post/query)
+- [B2B Payment Request](https://developer.safaricom.co.ke/b2b/apis/post/paymentrequest)
+- [B2C Payment Request](https://developer.safaricom.co.ke/b2c/apis/post/paymentrequest)
+- [Transaction Status Request](https://developer.safaricom.co.ke/transaction-status/apis/post/query)
+- [C2B Simulate Transaction](https://developer.safaricom.co.ke/c2b/apis/post/simulate)
+- [C2B Register URL](https://developer.safaricom.co.ke/c2b/apis/post/registerurl)
+- [Reversal](https://developer.safaricom.co.ke/reversal/apis/post/request)
+- [Generate Token](https://developer.safaricom.co.ke/oauth/apis)
 
 ##Installation
 
 ###Requirements
 
 PHP >=4.0.2
-
-## Installation
 
 Add `edwinmugendi/sapamapay` to `composer.json`.
 ```
@@ -40,17 +38,14 @@ Or run
 ```
 composer require edwinmugendi/sapamapay
 ```
-Or Raw PHP
+Without composer. Download the source code and `require_once` the `autoload.php`
 
 ```
 require_once __DIR__ . '/../vendor/autoload.php';
 ```
 ##Testing
-Update the <code>$api</code> variable to the API you want to run. 
+Update the `$api` variable to the API you want to run. 
 
-First call the <code>generate_token</code> to get the access token
-
-After getting the access token, set it in the <code>AccessToken</code> index in the <code>$configs</code> to make other calls.
 ```php
 <?php
 
@@ -185,9 +180,18 @@ echo '<p>Response var_dump:<p>';
 var_dump($response);
 
 ```
+##Authentication
+First call the `generate_token` to get the access token
+After getting the access token, set it in the `AccessToken` index in the `$configs` to make other calls.
 
-##Verbose debugging
-For descriptive testing of parameters passed, set the <code>Verbose</code> index in the <code>$configs</code>
+##Configurations
+The `$configs` parameters has the following indices
+
+- 'AccessToken' => The access token. Get the access to ken by running calling the `generate_token' API 
+- 'Environment' => Can be `'sandbox'` (when testing your app) or `'live'` (when your app is in production) 
+- 'Content-Type' - Should always be `application/json`
+- 'Verbose' - (Optional) for easy debugging, set this index to run your code in verbose mode ie echo and var dump parameters
+- Url - (Optional), this overrides the endpoint. By default we use https://sandbox.safaricom.co.ke/ and https://api.safaricom.co.ke/ for sandbox and live respecitvely. Don't forget the forward slush as the end(/)
 
 ```php
 $configs = array(
@@ -211,8 +215,6 @@ The response has the following indices
 - Endpoint - URL called
 - Parameters - Parameters passed to the URL
 - ExpectedResponse - Expected Reponse Parameters as documents in the API
-
-
 
 
 Sample Json
@@ -254,4 +256,4 @@ array (size=10)
 ```
 
 ##Help
-For API integration assistance, bugs or assistance, kindly reach me on <code>edwinmugendi@gmail.com</code>
+For API integration assistance, bugs or assistance, kindly reach me on `edwinmugendi@gmail.com`
