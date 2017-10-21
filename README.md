@@ -187,11 +187,11 @@ After getting the access token, set it in the `AccessToken` index in the `$confi
 ##Configurations
 The `$configs` parameters has the following indices
 
-- 'AccessToken' => The access token. Get the access to ken by running calling the `generate_token' API 
-- 'Environment' => Can be `'sandbox'` (when testing your app) or `'live'` (when your app is in production) 
-- 'Content-Type' - Should always be `application/json`
-- 'Verbose' - (Optional) for easy debugging, set this index to run your code in verbose mode ie echo and var dump parameters
-- Url - (Optional), this overrides the endpoint. By default we use https://sandbox.safaricom.co.ke/ and https://api.safaricom.co.ke/ for sandbox and live respecitvely. Don't forget the forward slush as the end(/)
+- `'AccessToken'` - The access token. Get the access to ken by running calling the `generate_token' API 
+- `'Environment'` - Can be `'sandbox'` (when testing your app) or `'live'` (when your app is in production) 
+- `'Content-Type'` - Should always be `'application/json'`
+- `'Verbose'` - (Optional) for easy debugging, set this index to run your code in verbose mode ie echo and var dump parameters
+- `'Url'` - (Optional), this overrides the endpoint. By default we use https://sandbox.safaricom.co.ke/ and https://api.safaricom.co.ke/ for sandbox and live respecitvely. Don't forget the forward slush as the end(/)
 
 ```php
 $configs = array(
