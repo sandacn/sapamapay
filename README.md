@@ -1,12 +1,11 @@
 
 ![](https://cloud.githubusercontent.com/assets/829059/9216039/82be51cc-40f6-11e5-88f5-f0cbd07bcc39.png)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+[![Build Status](https://img.shields.io/travis/dingo/api/master.svg?style=flat-square)](https://travis-ci.org/dingo/api)
+[![License](https://img.shields.io/packagist/l/dingo/api.svg?style=flat-square)](LICENSE)
+[![Development Version](https://img.shields.io/packagist/vpre/dingo/api.svg?style=flat-square)](https://packagist.org/packages/dingo/api)
+[![Monthly Installs](https://img.shields.io/packagist/dm/dingo/api.svg?style=flat-square)](https://packagist.org/packages/dingo/api)
+[![StyleCI](https://styleci.io/repos/18673522/shield)](https://styleci.io/repos/18673522)
 
 ## SapamaPay API
 This library is an API wrapper to the following Safaricom MPESA API's](https://developer.safaricom.co.ke/)
@@ -201,6 +200,7 @@ $configs = array(
 
 ##Response
 The response has the following indices
+
 - Environment - live or sandbox
 - Name - The name of the API called
 - HttpVerb - get or post
