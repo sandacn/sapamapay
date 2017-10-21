@@ -1,10 +1,10 @@
 <?php
 
-namespace Edwinmugendi\Mpesa;
+namespace Edwinmugendi\Sapamapay;
 
 /**
  * 
- * Safaricom Mpesa API wrapper
+ * New Safaricom MPESA API wrapper
  * 
  * @author Edwin Mugendi <edwinmugendi@gmail.com>
  */
@@ -893,7 +893,11 @@ class MpesaApi {
             );
         } else {
             foreach ($configs as $key => $value) {
-                if (in_array($key, array('Authorization', 'Content-Type'))) {
+                if (in_array($key, array('AccessToken', 'Content-Type'))) {
+                    if ($key == 'AccessToken') {
+                        $key = 'Authorization';
+                        $value = 'Bearer ' . $value;
+                    }//E# if statement
                     $header[] = $key . ': ' . $value;
                 }//E# if statement
             }//E# foreach statement

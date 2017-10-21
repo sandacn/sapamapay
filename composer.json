@@ -1,6 +1,6 @@
 {
-    "name": "edwinmugendi/mpesa",
-    "description": "Safaricom MPESA API",
+    "name": "edwinmugendi/sapamapay",
+    "description": "Sapama Pay API - MPESA, Equitel, Sapama Pay API",
     "authors": [
         {
             "name": "Edwin Mugendi",
@@ -9,11 +9,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=4.0.2"
     },
     "autoload": {
         "psr-4": {
-            "Edwinmugendi\\Mpesa\\": "src/"
+            "Edwinmugendi\\Sapamapay\\": "src/"
         }
     }
 }

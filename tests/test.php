@@ -2,23 +2,17 @@
 
 require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using Composer autoload
 
-use Edwinmugendi\Mpesa\MpesaApi;
+use Edwinmugendi\Sapamapay\MpesaApi;
 
 $mpesa_api = new MpesaApi();
 $configs = array(
-    'Authorization' => 'Bearer 16OGQOeQO6kImJAasXaA0I9GM1Ez',
-    'Environment' => 'live',
-    'Content-Type' => 'application/json',
-    'Url' => '',
-);
-$configs = array(
-    'Authorization' => 'Bearer Vflc8G3sj7sZP1UE60GfyqKlpQAI',
+    'AccessToken' => 'ACCESSTOKEN',
     'Environment' => 'sandbox',
     'Content-Type' => 'application/json',
     'Verbose' => '',
 );
 
-$api = 'stk_push';
+$api = 'c2b_simulate';
 
 if ($api == 'stk_push') {
     $parameters = array(
@@ -30,7 +24,7 @@ if ($api == 'stk_push') {
         'PartyA' => '254708374149',
         'PartyB' => '603013',
         'PhoneNumber' => '254708374149',
-        'CallBackURL' => 'http://sapama.com',
+        'CallBackURL' => 'https://url',
         'AccountReference' => '1232',
         'TransactionDesc' => 'TESTING',
     );
@@ -49,8 +43,8 @@ if ($api == 'stk_push') {
         'Remarks' => 'Remarks',
         'Initiator' => 'apiop41',
         'SecurityCredential' => 'TkNZpjhQ',
-        'QueueTimeOutURL' => 'http://sapama.com',
-        'ResultURL' => 'http://sapama.com',
+        'QueueTimeOutURL' => 'https://url',
+        'ResultURL' => 'https://url',
     );
 } else if ($api == 'b2b_payment_request') {
     $parameters = array(
@@ -63,8 +57,8 @@ if ($api == 'stk_push') {
         'Remarks' => 'Remarks',
         'Initiator' => 'apiop41',
         'SecurityCredential' => 'TkNZpjhQ',
-        'QueueTimeOutURL' => 'http://sapama.com',
-        'ResultURL' => 'http://sapama.com',
+        'QueueTimeOutURL' => 'https://url',
+        'ResultURL' => 'https://url',
         'AccountReference' => '12',
     );
 } else if ($api == 'b2c_payment_request') {
@@ -76,8 +70,8 @@ if ($api == 'stk_push') {
         'PartyA' => '603013',
         'PartyB' => '254708374149',
         'Remarks' => 'Remarks',
-        'QueueTimeOutURL' => 'http://sapama.com',
-        'ResultURL' => 'http://sapama.com',
+        'QueueTimeOutURL' => 'https://url',
+        'ResultURL' => 'https://url',
         'Occasion' => '12',
     );
 } else if ($api == 'reversal') {
@@ -88,8 +82,8 @@ if ($api == 'stk_push') {
         'Remarks' => 'remarks',
         'Initiator' => 'apiop41',
         'SecurityCredential' => 'TkNZpjhQ',
-        'QueueTimeOutURL' => 'http://sapama.com',
-        'ResultURL' => 'http://sapama.com',
+        'QueueTimeOutURL' => 'https://url',
+        'ResultURL' => 'https://url',
         'TransactionID' => '11211',
         'Occasion' => '12',
         'Amount' => '10',
@@ -102,17 +96,17 @@ if ($api == 'stk_push') {
         'Remarks' => 'remarks',
         'Initiator' => 'apiop41',
         'SecurityCredential' => 'TkNZpjhQ',
-        'QueueTimeOutURL' => 'http://sapama.com',
-        'ResultURL' => 'http://sapama.com',
+        'QueueTimeOutURL' => 'https://url',
+        'ResultURL' => 'https://url',
         'TransactionID' => '11211',
         'Occasion' => '12',
     );
 } else if ($api == 'c2b_register_url') {
     $parameters = array(
-        'ValidationURL' => 'https://192.241.213.216/mpesa_daraja_c2b_validate',
-        'ConfirmationURL' => 'https://192.241.213.216/mpesa_daraja_c2b_confirm',
+        'ValidationURL' => 'https://url',
+        'ConfirmationURL' => 'https://url',
         'ResponseType' => 'Completed',
-        'ShortCode' => '711693',
+        'ShortCode' => '603013',
     );
 } else if ($api == 'c2b_simulate') {
 
@@ -124,10 +118,9 @@ if ($api == 'stk_push') {
         'ShortCode' => '603013',
     );
 } else if ($api == 'generate_token') {
-
     $parameters = array(
-        'ConsumerKey' => 'Li2dKUeKhlX6Gw0Fpkbq6LEBndlpOuxZ',
-        'ConsumerSecret' => 'hX3Yyd0BGMBiYaln',
+        'ConsumerKey' => 'CONSUMER_KEY',
+        'ConsumerSecret' => 'CONSUMER_SECRET',
     );
 }//E# if statement
 
