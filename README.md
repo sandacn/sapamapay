@@ -8,7 +8,7 @@
 [![StyleCI](https://styleci.io/repos/18673522/shield)](https://styleci.io/repos/18673522)
 
 ## SapamaPay API
-This library is an API wrapper to the following Safaricom MPESA API's](https://developer.safaricom.co.ke/)
+This library is an API wrapper to the following [Safaricom MPESA API's](https://developer.safaricom.co.ke/)
 
 - [Lipa Na M-Pesa Online Payment API](https://developer.safaricom.co.ke/lipa-na-m-pesa-online/apis/post/stkpush/v1/processrequest).
 - [Lipa Na M-Pesa Query Request API](https://developer.safaricom.co.ke/lipa-na-m-pesa-online/apis/post/stkpushquery/v1/query).
