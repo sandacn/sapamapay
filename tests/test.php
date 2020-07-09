@@ -21,12 +21,6 @@ $phone = '';
 $consumer_key = '';
 $consumer_secret = '';
 
-$passkey = 'af03d5d0b058cd2bb0457feb6fe17234ac797146fe55cabf6ed8414d8771c44c';
-$shortcode = 4029307;
-$phone = 254722906835;
-$consumer_key = 'mXonAKPmgm1ZdezgcVDeBz6cwA3CtwEb';
-$consumer_secret = 'pTM3Bi6tJ8V5GG8T';
-
 $timestamp = preg_replace('/\D/', '', date('Y-m-d H:i:s'));
 
 
@@ -38,11 +32,11 @@ if ($api == 'stkpush') {
         'Password' => base64_encode($shortcode . $passkey . $timestamp),
         'Timestamp' => $timestamp,
         'TransactionType' => 'CustomerPayBillOnline',
-        'Amount' => '10',
+        'Amount' => '1',
         'PartyA' => $phone,
         'PartyB' => $shortcode,
         'PhoneNumber' => $phone,
-        'CallBackURL' => 'http://sapamacash.com',
+        'CallBackURL' => 'http://sapamacash.com/api/mpesa_stkpush_callback',
         'AccountReference' => 'Sapama ERP 123',
         'TransactionDesc' => 'TESTING',
     );
