@@ -3,13 +3,17 @@
 //Set the api_key, api_secret and endpoint as configs in the system that can be setup during configuration
 $api_key = 'key';
 $api_secret = 'secret';
-$endpoint = 'http://sapamacash.com/api/update_transaction';
+$endpoint = 'http://sapamacash.com/api/checkout';
 
 //Data to send a query string
 $data = array(
     'format' => 'json',
-    'id' => 1,
-    'ipned' => 'success',
+    'location_id' => 1,
+    'phone' => '254722906835',
+    'type' => 'stkpush',
+    'amount' => '5',
+    'description' => '',
+    'transaction_reference' => '',
     'api_key' => $api_key,
     'api_secret' => $api_secret,
 );
@@ -73,4 +77,4 @@ if ($decoded_data['httpStatusCode'] == 200 && array_key_exists('data', $decoded_
     echo "<p>HTTP Status Code: " . $decoded_data['httpStatusCode'] . '<p>';
     echo "System Code: " . $decoded_data['systemCode'] . '<p>';
     echo "Message: " . $decoded_data['systemCode'] . '<p>';
-}
+}//E# if else statement

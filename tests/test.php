@@ -5,27 +5,45 @@ require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using Compos
 use Edwinmugendi\Sapamapay\MpesaApi;
 
 $mpesa_api = new MpesaApi();
+
 $configs = array(
     'AccessToken' => 'ACCESSTOKEN',
-    'Environment' => 'sandbox',
+    'Environment' => 'live',
     'Content-Type' => 'application/json',
     'Verbose' => '',
 );
 
-$api = 'c2b_simulate';
 
-if ($api == 'stk_push') {
+
+$passkey = '';
+$shortcode = '';
+$phone = '';
+$consumer_key = '';
+$consumer_secret = '';
+
+$passkey = 'af03d5d0b058cd2bb0457feb6fe17234ac797146fe55cabf6ed8414d8771c44c';
+$shortcode = 4029307;
+$phone = 254722906835;
+$consumer_key = 'mXonAKPmgm1ZdezgcVDeBz6cwA3CtwEb';
+$consumer_secret = 'pTM3Bi6tJ8V5GG8T';
+
+$timestamp = preg_replace('/\D/', '', date('Y-m-d H:i:s'));
+
+
+$api = 'stkpush';
+
+if ($api == 'stkpush') {
     $parameters = array(
-        'BusinessShortCode' => '603013',
-        'Password' => 'TkNZpjhQ',
-        'Timestamp' => '20171010101010',
-        'TransactionType' => 'TransactionType',
+        'BusinessShortCode' => $shortcode,
+        'Password' => base64_encode($shortcode . $passkey . $timestamp),
+        'Timestamp' => $timestamp,
+        'TransactionType' => 'CustomerPayBillOnline',
         'Amount' => '10',
-        'PartyA' => '254708374149',
-        'PartyB' => '603013',
-        'PhoneNumber' => '254708374149',
-        'CallBackURL' => 'https://url',
-        'AccountReference' => '1232',
+        'PartyA' => $phone,
+        'PartyB' => $shortcode,
+        'PhoneNumber' => $phone,
+        'CallBackURL' => 'http://sapamacash.com',
+        'AccountReference' => 'Sapama ERP 123',
         'TransactionDesc' => 'TESTING',
     );
 } else if ($api == 'stk_query') {
@@ -119,12 +137,26 @@ if ($api == 'stk_push') {
     );
 } else if ($api == 'generate_token') {
     $parameters = array(
-        'ConsumerKey' => 'Li2dKUeKhlX6Gw0Fpkbq6LEBndlpOuxZ',
-        'ConsumerSecret' => 'hX3Yyd0BGMBiYaln',
+        'ConsumerKey' => '',
+        'ConsumerSecret' => '',
     );
 }//E# if statement
+//$response = $mpesa_api->call($api, $configs, $parameters);
 
-$response = $mpesa_api->call($api, $configs, $parameters);
+$access_token_parameters = array(
+    'ConsumerKey' => $consumer_key,
+    'ConsumerSecret' => $consumer_secret,
+);
+
+$response = $mpesa_api->call('generate_token', $configs, $access_token_parameters);
+
+if ($response['Response']['access_token']) {
+    $configs['AccessToken'] = $response['Response']['access_token'];
+
+    $response = $mpesa_api->call($api, $configs, $parameters);
+}//E# if statement
+
+
 echo 'JSON response: <p>';
 echo json_encode($response);
 echo '<p>Response var_dump:<p>';

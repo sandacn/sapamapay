@@ -42,7 +42,7 @@ class MpesaApi {
                 ),
             )
         ),
-        'stk_push' => array(
+        'stkpush' => array(
             'name' => 'Lipa Na M-Pesa Online Payment API',
             'description' => 'API to initiate online payment on behalf of a customer.',
             'endpoint' => 'mpesa/stkpush/v1/processrequest',
@@ -877,7 +877,7 @@ class MpesaApi {
      * 
      */
     public function request($api, $configs, $parameters) {
-        $this->endpoint .=$this->actual_api['endpoint'];
+        $this->endpoint .= $this->actual_api['endpoint'];
 
         $header = array();
 
