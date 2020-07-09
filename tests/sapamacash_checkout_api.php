@@ -1,5 +1,6 @@
 <?php
 
+
 //Set the api_key, api_secret and endpoint as configs in the system that can be setup during configuration
 $api_key = 'key';
 $api_secret = 'secret';
